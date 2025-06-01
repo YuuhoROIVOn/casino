@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 222 15% 19%;
+  --foreground: 0 0% 98%;
+  --card: 224 15% 15%;
+  --card-foreground: 0 0% 98%;
+  --popover: 224 15% 15%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 336 94% 66%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 217 100% 69%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 220 15% 20%;
+  --muted-foreground: 0 0% 70%;
+  --accent: 45 100% 50%;
+  --accent-foreground: 0 0% 10%;
+  --destructive: 0 85% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 220 15% 25%;
+  --input: 220 15% 25%;
+  --ring: 221 100% 69%;
+  --radius: 0.5rem;
+  --chart-1: 336 94% 66%;
+  --chart-2: 217 100% 69%;
+  --chart-3: 144 100% 47%;
+  --chart-4: 45 100% 50%;
+  --chart-5: 0 85% 60%;
+  --sidebar-background: 225 18% 12%;
+  --sidebar-foreground: 0 0% 98%;
+  --sidebar-primary: 336 94% 66%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 217 100% 69%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-border: 220 15% 20%;
+  --sidebar-ring: 336 94% 66%;
+}
+
+.dark {
+  --background: 222 15% 19%;
+  --foreground: 0 0% 98%;
+  --card: 224 15% 15%;
+  --card-foreground: 0 0% 98%;
+  --popover: 224 15% 15%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 336 94% 66%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 217 100% 69%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 220 15% 20%;
+  --muted-foreground: 0 0% 70%;
+  --accent: 45 100% 50%;
+  --accent-foreground: 0 0% 10%;
+  --destructive: 0 85% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 220 15% 25%;
+  --input: 220 15% 25%;
+  --ring: 221 100% 69%;
+  --radius: 0.5rem;
+  --chart-1: 336 94% 66%;
+  --chart-2: 217 100% 69%;
+  --chart-3: 144 100% 47%;
+  --chart-4: 45 100% 50%;
+  --chart-5: 0 85% 60%;
+  --sidebar-background: 225 18% 12%;
+  --sidebar-foreground: 0 0% 98%;
+  --sidebar-primary: 336 94% 66%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 217 100% 69%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-border: 220 15% 20%;
+  --sidebar-ring: 336 94% 66%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    background-image: radial-gradient(circle at 10% 20%, rgba(255, 94, 135, 0.1) 0%, rgba(94, 159, 255, 0.1) 90%);
+  }
+}
+
+@layer components {
+  .game-card {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  .game-card:hover {
+    @apply transform -translate-y-2 shadow-xl;
+  }
+  
+  .wallet-card {
+    @apply bg-opacity-5 backdrop-blur-md border border-white/10;
+  }
+
+  .roulette-wheel {
+    @apply relative h-[300px] w-[300px] rounded-full border-[10px] border-card shadow-xl;
+    background: conic-gradient(
+      hsl(var(--primary)) 0deg 10deg, 
+      hsl(var(--secondary)) 10deg 20deg,
+      hsl(var(--accent)) 20deg 30deg,
+      hsl(var(--chart-3)) 30deg 40deg,
+      hsl(var(--destructive)) 40deg 50deg,
+      hsl(var(--primary)) 50deg 60deg,
+      hsl(var(--secondary)) 60deg 70deg,
+      hsl(var(--accent)) 70deg 80deg,
+      hsl(var(--chart-3)) 80deg 90deg,
+      hsl(var(--destructive)) 90deg 100deg,
+      hsl(var(--primary)) 100deg 110deg,
+      hsl(var(--secondary)) 110deg 120deg,
+      hsl(var(--accent)) 120deg 130deg,
+      hsl(var(--chart-3)) 130deg 140deg,
+      hsl(var(--destructive)) 140deg 150deg,
+      hsl(var(--primary)) 150deg 160deg,
+      hsl(var(--secondary)) 160deg 170deg,
+      hsl(var(--accent)) 170deg 180deg,
+      hsl(var(--chart-3)) 180deg 190deg,
+      hsl(var(--destructive)) 190deg 200deg,
+      hsl(var(--primary)) 200deg 210deg,
+      hsl(var(--secondary)) 210deg 220deg,
+      hsl(var(--accent)) 220deg 230deg,
+      hsl(var(--chart-3)) 230deg 240deg,
+      hsl(var(--destructive)) 240deg 250deg,
+      hsl(var(--primary)) 250deg 260deg,
+      hsl(var(--secondary)) 260deg 270deg,
+      hsl(var(--accent)) 270deg 280deg,
+      hsl(var(--chart-3)) 280deg 290deg,
+      hsl(var(--destructive)) 290deg 300deg,
+      hsl(var(--primary)) 300deg 310deg,
+      hsl(var(--secondary)) 310deg 320deg,
+      hsl(var(--accent)) 320deg 330deg,
+      hsl(var(--chart-3)) 330deg 340deg,
+      hsl(var(--destructive)) 340deg 350deg,
+      hsl(var(--primary)) 350deg 360deg
+    );
+  }
+
+  .plinko-board {
+    @apply grid grid-cols-9 gap-2;
+  }
+  
+  .plinko-peg {
+    @apply w-5 h-5 rounded-full mx-auto;
+    background-color: hsl(var(--accent));
+  }
+  
+  .slot-reel {
+    @apply flex flex-col items-center rounded-lg p-2 shadow-inner;
+    background: linear-gradient(to bottom, hsl(var(--card)), hsl(var(--background)));
+  }
+  
+  .playing-card {
+    @apply relative w-20 h-28 bg-white rounded-lg shadow-md flex justify-center items-center m-1;
+  }
+  
+  .card-red {
+    @apply text-destructive;
+  }
+  
+  .card-black {
+    @apply text-black;
+  }
+
+  .coin-animation {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(5deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+  }
+
+  .spin-button:hover {
+    animation: pulse 1s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+}
